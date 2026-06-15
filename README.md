@@ -79,7 +79,7 @@ vibe-check-roast-edition/
 
 **Paige Brown** — Virtual Assistant & Web Developer  
 Built during the Persevere Cohort 3 Weekend Hackathon (June 2026)  
-[Clear Desk Solutions](https://your-cds-link-here) | [GitHub](https://github.com/paigebrown24)
+[Clear Desk Solutions](https://paigebrown24.github.io/clear-desk-solutions/index.html) | [GitHub](https://github.com/paigebrown24)
 
 ---
 
