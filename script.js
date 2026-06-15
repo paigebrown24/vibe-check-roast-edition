@@ -10,7 +10,7 @@ const ANTHROPIC_API_KEY = "sb_publishable_UErQr1QzJFGC86djVV_FIg_OFUhSWQC";
 
 // 🗄️ Supabase config — replace with your project values
 const SUPABASE_URL = "https://yvnkaovpziaheoxowdal.supabase.co";
-const SUPABASE_ANON_KEY = "sb_secret_6bPlvUnc6FBcgsIQEdQYDw_naEayDon";
+const SUPABASE_ANON_KEY = "sb_publishable_Nu69dEYovE7cLgR4jgIpTA_Ma-Qs8JO";
 
 // ── QUESTION POOL (15 total, 4 picked randomly each round) ──
 const ALL_QUESTIONS = [
