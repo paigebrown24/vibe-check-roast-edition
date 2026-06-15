@@ -6,11 +6,11 @@
 // ── CONFIG ──────────────────────────────────────────────────
 // 🔑 Paste your Anthropic API key below (for local dev only!)
 // Before pushing to GitHub, move this to a backend/Edge Function
-const ANTHROPIC_API_KEY = "YOUR_API_KEY_HERE";
+const ANTHROPIC_API_KEY = "sb_publishable_UErQr1QzJFGC86djVV_FIg_OFUhSWQC";
 
 // 🗄️ Supabase config — replace with your project values
-const SUPABASE_URL = "YOUR_SUPABASE_URL";
-const SUPABASE_ANON_KEY = "YOUR_SUPABASE_ANON_KEY";
+const SUPABASE_URL = "https://yvnkaovpziaheoxowdal.supabase.co";
+const SUPABASE_ANON_KEY = "sb_secret_6bPlvUnc6FBcgsIQEdQYDw_naEayDon";
 
 // ── QUESTION POOL (15 total, 4 picked randomly each round) ──
 const ALL_QUESTIONS = [
