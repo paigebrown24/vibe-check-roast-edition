@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vibe Check: The Roast Edition</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Starfield canvas -->
+  <canvas id="stars"></canvas>
+
+  <!-- Radial bg glow -->
+  <div class="bg-glow"></div>
+
+  <!-- INTRO SCREEN -->
+  <div id="screen-intro" class="screen active">
+    <div class="orb-wrap">
+      <div class="orb-ring"></div>
+      <div class="orb"></div>
+    </div>
+    <p class="eyebrow">✦ THE ORACLE AWAITS ✦</p>
+    <h1 class="title">VIBE CHECK</h1>
+    <p class="title-sub">The Roast Edition</p>
+    <p class="subtitle">Answer 4 unhinged questions.<br>Receive a vibe you didn't ask for.</p>
+    <p class="counter-text">🔮 <span id="vibe-count">...</span> vibes checked so far</p>
+    <button class="btn-primary" id="start-btn">Check My Vibe →</button>
+    <a href="#about" class="about-link">How does this work?</a>
+  </div>
+
+  <!-- QUIZ SCREEN -->
+  <div id="screen-quiz" class="screen">
+    <div class="quiz-wrap">
+      <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+      <p class="q-count" id="q-count">1 / 4</p>
+      <h2 class="question" id="question-text"></h2>
+      <div class="options-grid" id="options-grid"></div>
+    </div>
+  </div>
+
+  <!-- LOADING SCREEN -->
+  <div id="screen-loading" class="screen">
+    <div class="spinner"></div>
+    <p class="loading-text" id="loading-text">Consulting the vibe oracle...</p>
+  </div>
+
+  <!-- RESULT SCREEN -->
+  <div id="screen-result" class="screen">
+    <div class="result-card" id="result-card">
+      <p class="result-label">YOUR VIBE IS...</p>
+      <p class="vibe-emoji" id="vibe-emoji"></p>
+      <h1 class="vibe-title" id="vibe-title"></h1>
+      <div class="divider"></div>
+      <p class="result-text" id="result-description"></p>
+      <p class="aesthetic" id="result-aesthetic"></p>
+      <p class="warning" id="result-warning"></p>
+    </div>
+    <button class="btn-secondary" id="retry-btn">↻ Try Again</button>
+  </div>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="about-section">
+    <div class="about-inner">
+      <h2 class="about-title">✦ How It Works ✦</h2>
+      <div class="about-grid">
+        <div class="about-card">
+          <span class="about-icon">🎲</span>
+          <h3>4 Random Questions</h3>
+          <p>Each round pulls 4 questions from our pool of 15 unhinged prompts. No two games are the same.</p>
+        </div>
+        <div class="about-card">
+          <span class="about-icon">🤖</span>
+          <h3>AI Does the Roasting</h3>
+          <p>Your answers go to an AI that generates a completely unique vibe title, personality roast, aesthetic, and warning label.</p>
+        </div>
+        <div class="about-card">
+          <span class="about-icon">🌌</span>
+          <h3>Built for Chaos</h3>
+          <p>Made with HTML, CSS, JavaScript, and Supabase by a virtual assistant who had too much fun at a hackathon.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
