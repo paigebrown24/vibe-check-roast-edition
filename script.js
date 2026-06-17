@@ -6,7 +6,7 @@
 // ── CONFIG ──────────────────────────────────────────────────
 // 🔑 Paste your Anthropic API key below (for local dev only!)
 // Before pushing to GitHub, move this to a backend/Edge Function
-const ANTHROPIC_API_KEY = "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";
+const ANTHROPIC_API_KEY = "";
 
 // 🗄️ Supabase config — replace with your project values
 const SUPABASE_URL = "https://yvnkaovpziaheoxowdal.supabase.co";
@@ -309,19 +309,13 @@ Respond in ONLY valid JSON with no markdown, no backticks, no preamble. Use this
 }`;
 
   try {
-    const response = await fetch("https://api.anthropic.com/v1/messages", {
+    const response = await fetch("https://yvnkaovpziaheoxowdal.supabase.co/functions/v1/get-vibe", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "x-api-key": ANTHROPIC_API_KEY,
-        "anthropic-version": "2023-06-01",
-        "anthropic-dangerous-direct-browser-access": "true",
+        "Authorization": `Bearer ${SUPABASE_ANON_KEY}`,
       },
-      body: JSON.stringify({
-        model: "claude-sonnet-4-6",
-        max_tokens: 1000,
-        messages: [{ role: "user", content: prompt }],
-      }),
+      body: JSON.stringify({ prompt: prompt }),
     });
 
     const data = await response.json();
