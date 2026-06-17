@@ -14,74 +14,21 @@ const SUPABASE_ANON_KEY = "sb_publishable_Nu69dEYovE7cLgR4jgIpTA_Ma-Qs8JO";
 
 // ── QUESTION POOL (15 total, 4 picked randomly each round) ──
 const ALL_QUESTIONS = [
-  {
-    question: "Pick a suspicious vegetable.",
-    options: ["Eggplant (it's plotting something)", "Celery (why is it so loud?)", "Beet (it's hiding a secret identity)", "Artichoke (way too many layers)"],
-  },
-  {
-    question: "What's your red flag superpower?",
-    options: ["Replying 'lol' to a paragraph", "Googling someone mid-conversation", "Emotional damage via playlist", "Leaving people on read as a love language"],
-  },
-  {
-    question: "Pick a cryptid to be your roommate.",
-    options: ["Mothman (chaotic but loyal)", "Bigfoot (quiet, respects boundaries)", "Loch Ness Monster (mysterious, rarely home)", "Chupacabra (messy but fun at parties)"],
-  },
-  {
-    question: "What does your brain sound like at 2am?",
-    options: ["A true crime podcast on 1.5x speed", "Elevator music but slightly off-key", "That one embarrassing thing from 2014 on repeat", "A group chat that nobody muted"],
-  },
-  {
-    question: "Pick an object that holds too much power.",
-    options: ["A partially charged phone at 3%", "The aux cord at a party", "A read receipt", "The last slice of pizza"],
-  },
-  {
-    question: "What's your emotional support coping mechanism?",
-    options: ["Reorganizing something that was already organized", "Adding things to an online cart and never checking out", "Making a playlist instead of processing feelings", "Starting a new hobby, quitting in 4 days"],
-  },
-  {
-    question: "You're a font. Which one?",
-    options: ["Comic Sans (misunderstood icon)", "Times New Roman (secretly unhinged)", "Papyrus (main character energy)", "Wingdings (nobody gets you and that's fine)"],
-  },
-  {
-    question: "Pick a nap location that speaks to your soul.",
-    options: ["Under a desk", "In a car in a parking lot", "On a pile of clean laundry you'll never fold", "Standing up in the shower"],
-  },
-  {
-    question: "Your villain origin story starts with:",
-    options: ["Someone chewing too loud", "A WiFi password that doesn't work", "Being left on read by your crush", "Someone saying 'we need to talk'"],
-  },
-  {
-    question: "Pick an unhinged life skill you've mastered.",
-    options: ["Falling asleep anywhere in under 3 minutes", "Eating a full meal over the sink", "Pretending to be busy when you're doing nothing", "Texting back 4 days later like nothing happened"],
-  },
-  {
-    question: "What's your spirit animal doing right now?",
-    options: ["Napping aggressively", "Staring at a wall thinking deeply", "Causing a scene at a grocery store", "Ghosting everyone it knows"],
-  },
-  {
-    question: "You're a kitchen appliance. Which one?",
-    options: ["A blender with no lid", "A microwave that adds 30 seconds every time", "A toaster that only burns one side", "A fridge that hums at 3am"],
-  },
-  {
-    question: "Pick a way to enter a room.",
-    options: ["Like you forgot why you walked in", "Like a final boss", "Like you're already leaving", "Like you own it but owe rent"],
-  },
-  {
-    question: "What's your toxic trait at a group project?",
-    options: ["Doing everything yourself then being mad about it", "Disappearing until the last night", "Making the Google Doc pretty instead of writing anything", "Saying 'I'll do whatever' then vetoing everything"],
-  },
-  {
-    question: "You're a weather event. Which one?",
-    options: ["A fog that showed up uninvited", "A thunderstorm with great lighting", "A drizzle that won't commit", "A heatwave that peaked too early"],
-  },
-];
-
-const LOADING_MESSAGES = [
-  "Consulting the vibe oracle...",
-  "Reading your emotional aura...",
-  "Calculating chaos levels...",
-  "Generating your vibe title...",
-  "Almost done judging you...",
+  { question: "What are you doing at 2am on a Tuesday?", options: ["Doom scrolling and calling it research", "Crying at a video about a dog I've never met", "Reorganizing my notes app for the 4th time", "Texting someone I shouldn't"] },
+  { question: "What does your villain arc look like?", options: ["Quietly unfollowing everyone and saying nothing", "Sending a very calm, very long email", "Becoming unreachable for 3-5 business days", "Posting a vague but pointed playlist"] },
+  { question: "How do you handle conflict?", options: ["I don't, I just wait for it to die", "I make a whole plan and then do nothing", "I bring it up calmly then cry in the car", "I journal about it aggressively"] },
+  { question: "What's your love language?", options: ["Sending memes at 1am", "Doing the thing without being asked", "Remembering something small they said 6 months ago", "Leaving them on read but thinking about them constantly"] },
+  { question: "What energy do you bring to a group chat?", options: ["The one who reacts but never responds", "The one who sends 11 messages then disappears", "The one who only shows up in a crisis", "The one who screenshots everything"] },
+  { question: "What's your red flag superpower?", options: ["Replying 'lol' to a paragraph", "Googling someone mid-conversation", "Emotional damage via playlist", "Leaving people on read as a love language"] },
+  { question: "Pick a nap location that speaks to your soul.", options: ["Under a desk", "In a car in a parking lot", "On a pile of clean laundry you'll never fold", "Standing up in the shower"] },
+  { question: "Your villain origin story starts with:", options: ["Someone chewing too loud", "A WiFi password that doesn't work", "Being left on read by your crush", "Someone saying 'we need to talk'"] },
+  { question: "Pick an unhinged life skill you've mastered.", options: ["Falling asleep anywhere in under 3 minutes", "Eating a full meal over the sink", "Pretending to be busy when you're doing nothing", "Texting back 4 days later like nothing happened"] },
+  { question: "What's your spirit animal doing right now?", options: ["Napping aggressively", "Staring at a wall thinking deeply", "Causing a scene at a grocery store", "Ghosting everyone it knows"] },
+  { question: "You're a kitchen appliance. Which one?", options: ["A blender with no lid", "A microwave that adds 30 seconds every time", "A toaster that only burns one side", "A fridge that hums at 3am"] },
+  { question: "Pick a way to enter a room.", options: ["Like you forgot why you walked in", "Like a final boss", "Like you're already leaving", "Like you own it but owe rent"] },
+  { question: "What's your toxic trait at a group project?", options: ["Doing everything yourself then being mad about it", "Disappearing until the last night", "Making the Google Doc pretty instead of writing anything", "Saying 'I'll do whatever' then vetoing everything"] },
+  { question: "You're a weather event. Which one?", options: ["A fog that showed up uninvited", "A thunderstorm with great lighting", "A drizzle that won't commit", "A heatwave that peaked too early"] },
+  { question: "What's your font energy?", options: ["Comic Sans (misunderstood icon)", "Times New Roman (secretly unhinged)", "Papyrus (main character energy)", "Wingdings (nobody gets you and that's fine)"] },
 ];
 
 // ── STATE ────────────────────────────────────────────────────
@@ -293,20 +240,20 @@ async function fetchVibe() {
     question: q.question,
     answer: answers[i],
   }));
+const prompt = `You are a brutally funny, deeply perceptive personality roast generator. You are NOT a recap machine — do NOT just repeat the user's answers back at them. Instead, use their answers as psychological clues to make savage, specific conclusions about who they are as a person at their core. Read between the lines. Call out what their answers REVEAL about them, not what they said. Be like a friend who knows you too well and has been waiting for permission to say this out loud. Funny, specific, a little too accurate, and slightly mean in a loving way.
 
-  const prompt = `You are a chaotic, hilarious, slightly unhinged personality quiz generator. Based on these quiz answers, generate a ridiculous "vibe check" result. Be funny, oddly specific, and a little too accurate.
-
-The user answered these questions:
+The user answered:
 ${questionAnswerPairs.map(qa => `Q: ${qa.question}\nA: ${qa.answer}`).join("\n\n")}
 
-Respond in ONLY valid JSON with no markdown, no backticks, no preamble. Use this exact format:
+Respond in ONLY valid JSON with no markdown, no backticks, no preamble:
 {
-  "vibeTitle": "A 2-5 word chaotic vibe title like 'Delulu CEO Energy' or 'Feral Spreadsheet Goblin' or 'Unhinged Cozy Chaos'",
+  "vibeTitle": "2-5 word chaotic vibe title that feels like a diagnosis",
   "vibeEmoji": "1-3 emojis that match the vibe",
-  "description": "A 2-3 sentence funny, oddly specific personality roast based on their answers. Be weirdly accurate and a little too personal. Reference their specific answer choices.",
-  "aesthetic": "One sentence describing their aesthetic, like 'Your aesthetic is a haunted library with RGB lighting'",
-  "warning": "A funny one-sentence warning label for this person, like 'Warning: will absolutely gaslight you into watching a 3-hour video essay'"
+  "description": "2-3 sentences that ROAST the person based on what their answers REVEAL about their personality. Do not repeat their answers. Make psychological conclusions. Be funny and a little devastating.",
+  "aesthetic": "One sentence describing their aesthetic in a specific, unexpected, slightly unhinged way",
+  "warning": "A funny one-sentence warning label that exposes something true about them"
 }`;
+ 
 
   try {
     const response = await fetch("https://yvnkaovpziaheoxowdal.supabase.co/functions/v1/get-vibe", {
