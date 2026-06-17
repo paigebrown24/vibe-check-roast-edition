@@ -6,7 +6,7 @@
 // ── CONFIG ──────────────────────────────────────────────────
 // 🔑 Paste your Anthropic API key below (for local dev only!)
 // Before pushing to GitHub, move this to a backend/Edge Function
-const ANTHROPIC_API_KEY = "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";
+const ANTHROPIC_API_KEY = "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";
 
 // 🗄️ Supabase config — replace with your project values
 const SUPABASE_URL = "https://yvnkaovpziaheoxowdal.supabase.co";
