@@ -30,7 +30,13 @@ const ALL_QUESTIONS = [
   { question: "You're a weather event. Which one?", options: ["A fog that showed up uninvited", "A thunderstorm with great lighting", "A drizzle that won't commit", "A heatwave that peaked too early"] },
   { question: "What's your font energy?", options: ["Comic Sans (misunderstood icon)", "Times New Roman (secretly unhinged)", "Papyrus (main character energy)", "Wingdings (nobody gets you and that's fine)"] },
 ];
-
+const LOADING_MESSAGES = [
+  "Consulting the vibe oracle...",
+  "Reading your emotional aura...",
+  "Calculating chaos levels...",
+  "Generating your vibe title...",
+  "Almost done judging you...",
+];
 // ── STATE ────────────────────────────────────────────────────
 let currentQuestions = [];
 let currentIndex = 0;
